@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Cafe24Ohsquareair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cafe24Ohsquareair";
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+header {
+  height: 50px;
+  border: 5px solid #f8be00;
+  color: #f8be00;
+  font-weight: 900;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.menu {
+  width: 135px;
+  border: 5px solid #000;
+  height: 600px;
+  padding: 10px;
+  /* 참고 */
+  flex-shrink: 0;
+}
+
+.menu ul li {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.addBtn {
+  width: 90%;
+  padding: 7px 10px;
+  background: black;
+  color: #5a8cf1;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.addBtn:hover {
+  background-color: #5a8cf1;
+  color: #000;
+}
+
+.main {
+  display: flex;
+  margin: 10px;
+}
+
+.mainContents {
+  height: 630px;
+  border: 5px solid #5a8cf1;
+  margin-left: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  box-sizing: border-box;
+  /* 참고 */
+  overflow-y: scroll;
+}
+
+.mainContents .mainbox {
+  width: 220px;
+  height: 220px;
+  background-color: #bdf4ff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.mainbox img {
+  width: 100%;
+}
+
+.mainbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 120px;
+}
+
+@media (max-width: 1000px) {
+  .mainContents .mainbox {
+    background-color: #f8be00;
+  }
+}
+
+@media (max-width: 700px) {
+  .mainContents .mainbox {
+    background-color: #fd96c4;
+  }
+}
