@@ -15,6 +15,7 @@
     </header>
     <div class="main">
         <nav class="menu">
+            <button type="button" class="addBtn">추가</button>
             <ul>
                 <li>소주</li>
                 <li>맥주</li>
@@ -30,7 +31,21 @@
             <div class="mainbox"><img src="./img/wine.jpg"><span>와인의 매력을 아직 깨닫지 못했어요.</span></div>
             <div class="mainbox"><img src="./img/rum.jpg"><span>먹어본 적이 없을 무!</span></div>
         </section>
+
+        <form class="addPage">
+            <div class="addPageBack">
+                <span class="closeBtn">X</span>
+                <label for="inputName" class="label">이름</label>
+                <input id="inputName" type="text" class="input" required />
+                <label for="inputImage" class="label">이미지</label>
+                <input id="inputImage" type="text" class="input" placeholder="URL" required />
+                <label for="inputText" class="label">내용</label>
+                <input id="inputText" type="text" class="input" required />
+                <button type="submit" class="submitBtn">저장</button>
+            </div>
+        </form>
     </div>
+    <script type="text/javascript" src="./고량주.js"></script>
 </body>
 
 </html>
