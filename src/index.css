@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Cafe24Ohsquareair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cafe24Ohsquareair";
+}
+
+/* body {
+  overflow-y: scroll;
+} */
+
+ul,
+li {
+  list-style: none;
+}
+
+.main {
+  display: flex;
+  margin: 10px;
+}
+
+@media (max-width: 1000px) {
+  .mainContents .mainbox {
+    background-color: #f8be00;
+  }
+}
+
+@media (max-width: 700px) {
+  .mainContents .mainbox {
+    background-color: #fd96c4;
+  }
+}
