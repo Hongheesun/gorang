@@ -10,9 +10,6 @@ import wine from "../img/wine.jpg";
 import rum from "../img/rum.jpg";
 
 export default function Main() {
-  const [id, setId] = useState(null);
-  //id값을 별도로 관리해주기 위해서
-  const [nextId, setNextId] = useState(4);
   const [topics, setTopics] = useState([
     {
       id: 1,
@@ -46,13 +43,14 @@ export default function Main() {
     },
   ]);
   let content = null;
+  let len = topics.length
 
   content = (
     <AddItemModal
       onCreate={(_inputName, _inputImg, _inputText) => {
         //새로운 객체 생성해주기!
         const newTopic = {
-          id: nextId,
+          id: len+1,
           inputName: _inputName,
           inputImg: _inputImg,
           inputText: _inputText,
@@ -60,8 +58,6 @@ export default function Main() {
         const newTopics = [...topics];
         newTopics.push(newTopic);
         setTopics(newTopics);
-        setId(nextId);
-        setNextId(nextId + 1);
       }}
     ></AddItemModal>
   );
@@ -71,9 +67,6 @@ export default function Main() {
       <Menu
         topics={topics}
         content={content}
-        onChangeMode={(_id) => {
-          setId(_id);
-        }}
       ></Menu>
       <MainContents topics={topics}></MainContents>
     </div>
