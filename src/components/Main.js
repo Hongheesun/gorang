@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
 import MainContents from "./MainContents";
+import AddItemModal from "./AddItemModal";
 
 import soju from "../img/soju.png";
 import beer from "../img/beer.jpg";
@@ -42,12 +43,33 @@ export default function Main() {
     },
   ]);
 
+  const [addItemModalOn, setAddItemModal] = useState(false);
+
   return (
     <div className="main">
       <Menu
         topics={topics}
+        handleClick={setAddItemModal}
       ></Menu>
       <MainContents topics={topics}></MainContents>
+      <AddItemModal
+        show={addItemModalOn}
+        onHide={() => setAddItemModal(false)}
+        // onCreate={(_inputName, _inputImg, _inputText) => {
+        //   //새로운 객체 생성해주기!
+        //   const newTopic = {
+        //     id: nextId,
+        //     inputName: _inputName,
+        //     inputImg: _inputImg,
+        //     inputText: _inputText,
+        //   };
+        //   const newTopics = [...props.topics];
+        //   newTopics.push(newTopic);
+        //   props.setTopics(newTopics);
+        //   setId(nextId);
+        //   setNextId(nextId + 1);
+        // }}
+      />
     </div>
   );
 }
