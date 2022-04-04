@@ -10,9 +10,6 @@ import wine from "../img/wine.jpg";
 import rum from "../img/rum.jpg";
 
 export default function Main() {
-  const [id, setId] = useState(null);
-  //id값을 별도로 관리해주기 위해서
-  const [nextId, setNextId] = useState(4);
   const [topics, setTopics] = useState([
     {
       id: 1,
@@ -45,37 +42,34 @@ export default function Main() {
       inputText: "애플퐉스같은 맛있는 맥주가 좋아요.",
     },
   ]);
-  let content = null;
 
-  content = (
-    <AddItemModal
-      onCreate={(_inputName, _inputImg, _inputText) => {
-        //새로운 객체 생성해주기!
-        const newTopic = {
-          id: nextId,
-          inputName: _inputName,
-          inputImg: _inputImg,
-          inputText: _inputText,
-        };
-        const newTopics = [...topics];
-        newTopics.push(newTopic);
-        setTopics(newTopics);
-        setId(nextId);
-        setNextId(nextId + 1);
-      }}
-    ></AddItemModal>
-  );
+  const [addItemModalOn, setAddItemModal] = useState(false);
 
   return (
     <div className="main">
       <Menu
         topics={topics}
-        content={content}
-        onChangeMode={(_id) => {
-          setId(_id);
-        }}
+        handleClick={setAddItemModal}
       ></Menu>
       <MainContents topics={topics}></MainContents>
+      <AddItemModal
+        show={addItemModalOn}
+        onHide={() => setAddItemModal(false)}
+        // onCreate={(_inputName, _inputImg, _inputText) => {
+        //   //새로운 객체 생성해주기!
+        //   const newTopic = {
+        //     id: nextId,
+        //     inputName: _inputName,
+        //     inputImg: _inputImg,
+        //     inputText: _inputText,
+        //   };
+        //   const newTopics = [...props.topics];
+        //   newTopics.push(newTopic);
+        //   props.setTopics(newTopics);
+        //   setId(nextId);
+        //   setNextId(nextId + 1);
+        // }}
+      />
     </div>
   );
 }
