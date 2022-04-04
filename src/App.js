@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./Component/Header";
-import Menu from "./Component/Menu";
-import MainContents from "./Component/MainContents";
-import Main from "./Component/Main";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import MainContents from "./components/MainContents";
+import Main from "./components/Main";
 
 function App() {
   return (
