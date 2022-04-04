@@ -32,7 +32,7 @@ const AddItemModal = ({ show, onHide }, props) => {
               X
             </span>
             <Form.Group>
-              <Form.Label for="inputName" className="label">
+              <Form.Label htmlFor="inputName" className="label">
                 이름
               </Form.Label>
               <Form.Control
@@ -43,7 +43,7 @@ const AddItemModal = ({ show, onHide }, props) => {
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label for="inputImage" name="inputImg" className="label">
+              <Form.Label htmlFor="inputImage" name="inputImg" className="label">
                 이미지
               </Form.Label>
               <Form.Control
@@ -55,7 +55,7 @@ const AddItemModal = ({ show, onHide }, props) => {
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label for="inputText" className="label">
+              <Form.Label htmlFor="inputText" className="label">
                 내용
               </Form.Label>
               <Form.Control

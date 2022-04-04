@@ -14,11 +14,11 @@ export default function AddPage() {
         <span className="closeBtn" onClick={setIsShow}>
           X
         </span>
-        <label for="inputName" className="label">
+        <label htmlFor="inputName" className="label">
           이름
         </label>
         <input id="inputName" type="text" className="input" required />
-        <label for="inputImage" className="label">
+        <label htmlFor="inputImage" className="label">
           이미지
         </label>
         <input
@@ -28,7 +28,7 @@ export default function AddPage() {
           placeholder="URL"
           required
         />
-        <label for="inputText" className="label">
+        <label htmlFor="inputText" className="label">
           내용
         </label>
         <input id="inputText" type="text" className="input" required />
