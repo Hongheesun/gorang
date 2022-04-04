@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
 import MainContents from "./MainContents";
-import AddItemModal from "./AddItemModal";
 
 import soju from "../img/soju.png";
 import beer from "../img/beer.jpg";
@@ -42,31 +41,11 @@ export default function Main() {
       inputText: "애플퐉스같은 맛있는 맥주가 좋아요.",
     },
   ]);
-  let content = null;
-  let len = topics.length
-
-  content = (
-    <AddItemModal
-      onCreate={(_inputName, _inputImg, _inputText) => {
-        //새로운 객체 생성해주기!
-        const newTopic = {
-          id: len+1,
-          inputName: _inputName,
-          inputImg: _inputImg,
-          inputText: _inputText,
-        };
-        const newTopics = [...topics];
-        newTopics.push(newTopic);
-        setTopics(newTopics);
-      }}
-    ></AddItemModal>
-  );
 
   return (
     <div className="main">
       <Menu
         topics={topics}
-        content={content}
       ></Menu>
       <MainContents topics={topics}></MainContents>
     </div>
