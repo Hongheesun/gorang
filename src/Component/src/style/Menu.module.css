@@ -1,0 +1,30 @@
+.menu {
+  width: 135px;
+  border: 5px solid #000;
+  height: 600px;
+  padding: 10px;
+  /* 참고 */
+  flex-shrink: 0;
+}
+
+.menu ul li {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.addBtn {
+  width: 90%;
+  padding: 7px 10px;
+  background: black;
+  color: #5a8cf1;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.addBtn:hover {
+  background-color: #5a8cf1;
+  color: #000;
+}

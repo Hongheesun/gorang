@@ -1,0 +1,34 @@
+.mainContents {
+  height: 630px;
+  border: 5px solid #5a8cf1;
+  margin-left: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  box-sizing: border-box;
+  /* 참고 */
+  overflow-y: scroll;
+}
+
+.mainContents .mainbox {
+  width: 220px;
+  height: 220px;
+  background-color: #bdf4ff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.mainbox img {
+  width: 100%;
+}
+
+.mainbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 120px;
+}
